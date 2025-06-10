@@ -21,6 +21,7 @@ import { Cable, X } from "lucide-react";
 import type { Dispatch, FC, SetStateAction } from "react";
 import {
   lazy,
+  Suspense,
   useEffect,
   useMemo,
   useState,
@@ -106,7 +107,7 @@ export default function Articles() {
   }, [allValues.items]);
 
   return (
-    <div className="md:grid block grid-cols-[20%_80%] md:flex-row flex-col h-auto">
+    <div className="md:grid flex-auto block grid-cols-[20%_80%] md:flex-row flex-col h-auto">
       <Accordion type="multiple" defaultValue={["projects"]}>
         <AccordionItem value="projects" className="w-full">
           <AccordionTrigger className=" [&[data-state=open]>.arrow-icon]:text-slate-50! [&[data-state=open]>h3]:text-slate-50 [&[data-state=open]>.arrow-icon]:rotate-90 items-center justify-start py-4 px-6 border-b border-stroke rounded-none h-14 w-full flex">
@@ -198,29 +199,48 @@ export default function Articles() {
             </div>
           ))}
         </div>
-        <div>
-          <ScrollableContent className="hidden md:flex w-[-webkit-fill-available]">
-            {ActiveComponent ? (
-              <ActiveComponent
-                items={allValues.items as ReferralKey[]}
-                setActivePath={setActivePath}
-                setActiveTabs={setActiveTabs}
-              />
-            ) : (
-              <></>
-            )}
-          </ScrollableContent>
-          <div className="md:hidden block p-3">
-            {ActiveComponent ? (
-              <ActiveComponent
-                items={allValues.items as ReferralKey[]}
-                setActivePath={setActivePath}
-                setActiveTabs={setActiveTabs}
-              />
-            ) : (
-              <></>
-            )}
-          </div>
+        <div className="flex-auto">
+          <Suspense
+            fallback={
+              <div className="w-full h-full flex items-center justify-center">
+                <div className="hole">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                </div>
+              </div>
+            }
+          >
+            <ScrollableContent className="hidden md:flex w-[-webkit-fill-available]">
+              {ActiveComponent ? (
+                <ActiveComponent
+                  items={allValues.items as ReferralKey[]}
+                  setActivePath={setActivePath}
+                  setActiveTabs={setActiveTabs}
+                />
+              ) : (
+                <></>
+              )}
+            </ScrollableContent>
+            <div className="md:hidden block p-3">
+              {ActiveComponent ? (
+                <ActiveComponent
+                  items={allValues.items as ReferralKey[]}
+                  setActivePath={setActivePath}
+                  setActiveTabs={setActiveTabs}
+                />
+              ) : (
+                <></>
+              )}
+            </div>
+          </Suspense>
         </div>
       </div>
     </div>
