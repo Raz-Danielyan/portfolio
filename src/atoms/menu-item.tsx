@@ -1,5 +1,5 @@
 import MarkDownSvg from "@/assets/markdown.svg";
-import type { pages } from "@/pages/about";
+import type { pages } from "@/pages/harmony";
 
 interface MenuItemProps {
   setActivePath: React.Dispatch<React.SetStateAction<pages | null>>;
