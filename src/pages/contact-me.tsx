@@ -188,7 +188,7 @@ export default function ContactMe() {
                       htmlFor="email"
                       className="text-foreground font-base mb-2"
                     >
-                      Email
+                      _email:
                     </Label>
                     <Input
                       id="email"
@@ -214,7 +214,7 @@ export default function ContactMe() {
                       htmlFor="message"
                       className="text-foreground font-base mb-2"
                     >
-                      Message
+                      _message
                     </Label>
                     <Textarea
                       id="message"

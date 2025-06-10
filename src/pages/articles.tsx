@@ -71,7 +71,7 @@ const components: Record<
 export default function Articles() {
   const form = useForm({
     defaultValues: {
-      items: ["editor"],
+      items: ["editor", "reactjs", "javascript"],
     },
   });
   const [activeTabs, setActiveTabs] = useState<projects[]>([]);
