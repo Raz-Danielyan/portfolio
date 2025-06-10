@@ -218,7 +218,7 @@ export default function Articles() {
               </div>
             }
           >
-            <ScrollableContent className="hidden md:flex w-[-webkit-fill-available]">
+            <ScrollableContent className="hidden md:flex w-full">
               {ActiveComponent ? (
                 <ActiveComponent
                   items={allValues.items as ReferralKey[]}

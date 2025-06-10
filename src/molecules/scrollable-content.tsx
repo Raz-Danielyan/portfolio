@@ -49,9 +49,7 @@ export default function ScrollableContent({
 
   return (
     <div className={cn("editor", className)} ref={containerRef}>
-      <div className="xl:px-10 px-5 py-3 w-[-webkit-fill-available]">
-        {children}
-      </div>
+      <div className="xl:px-10 px-5 py-3 w-full">{children}</div>
       {!isMobile && (
         <div className="scrollbar-track">
           <div className="scrollbar-container">
