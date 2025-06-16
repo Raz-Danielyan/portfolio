@@ -23,7 +23,7 @@ const referrals: referralType = {
   editor: {
     label: "my editor Setup",
     descr:
-      "My editor is set up,and how avoid the pitfalls of complex configuration.",
+      "My editor set up,and how avoid the pitfalls of complex configuration.",
     img: editor,
     icon: Cable,
     color: "bg-teal-300",

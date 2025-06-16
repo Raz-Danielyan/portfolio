@@ -174,7 +174,7 @@ export default function ContactMe() {
                       {...register("username", {
                         required: "Username is required",
                       })}
-                      placeholder="Enter your username"
+                      placeholder="Enter your name"
                     />
                     {errors.username && (
                       <p className="text-sm text-red-600 mt-1">

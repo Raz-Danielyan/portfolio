@@ -33,7 +33,7 @@ const expCards: cardType[] = [
       "Razmik contributions to Digilite web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
     imgPath: "/images/digilite.png",
     logoPath: "/images/digilite-small.jpg",
-    title: "Full Stack Developer",
+    title: "Frontend Developer",
     date: "May 2022 - May 2024",
     responsibilities: [
       "focused on creating custom futures on projects 5+ years.",

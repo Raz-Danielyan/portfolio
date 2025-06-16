@@ -7,7 +7,7 @@ export default function Root() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
-    <div className="bg-theme-backdrop xl:p-[70px] lg:p-[32px] p-4 h-screen">
+    <div className="bg-theme-backdrop xl:p-[70px] lg:p-[32px] p-4 h-dvh">
       <div className="w-full border border-stroke rounded-lg h-full bg-main-backdrop flex flex-col overflow-x-hidden relative max-w-[1920px] mx-auto">
         <Header {...{ isMenuOpen, setIsMenuOpen }} />
         {isMenuOpen ? <></> : <Outlet />}
