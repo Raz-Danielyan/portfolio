@@ -14,7 +14,7 @@ export default function Home() {
             {">"} Front-end developer
           </h2>
           <p className="text-foreground mb-2 xl:text-md text-sm">
-            // complete the game to continue
+            // Welcome to my portfolio website,
           </p>
           <p className="text-foreground mb-2 xl:text-md text-sm">
             // find my profile on Github:{" "}
