@@ -96,7 +96,7 @@ export default function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
               _about-me
             </NavLink>
             <NavLink to="/articles" className="relative z-10">
-              _projects
+              _articles
             </NavLink>
             <NavLink
               to="/contact-me"
@@ -153,7 +153,7 @@ export default function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
             className="border-t border-stroke px-6 py-4 text-base text-heading-foreground"
             onClick={handleMenuClick}
           >
-            _projects
+            _articles
           </NavLink>
           <NavLink
             to="/contact-me"
