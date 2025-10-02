@@ -7,7 +7,7 @@ import TitleHeader from "../components/TitleHeader";
 
 export type cardType = {
   review: string;
-  imgPath: string;
+  imgPath?: string;
   logoPath: string;
   title: string;
   date: string;
@@ -17,7 +17,7 @@ export type cardType = {
 const expCards: cardType[] = [
   {
     review:
-      "Razmik brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
+      "Razmik’s brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
     imgPath: "/images/digilite.png",
     logoPath: "/images/digilite-small.jpg",
     title: "Intern Frontend Developer",
@@ -30,7 +30,7 @@ const expCards: cardType[] = [
   },
   {
     review:
-      "Razmik contributions to Digilite web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
+      "Razmik’s contributions to Digilite web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
     imgPath: "/images/digilite.png",
     logoPath: "/images/digilite-small.jpg",
     title: "Frontend Developer",
@@ -39,6 +39,29 @@ const expCards: cardType[] = [
       "focused on creating custom futures on projects 5+ years.",
       "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
       "Contributed to open-source projects that were used with the web ecosystem.",
+    ],
+  },
+  {
+    review:
+      "Razmik’s contributions to Bask Health’s web applications have been highly impactful. He consistently demonstrates a strong problem-solving mindset and delivers reliable, user-focused solutions that elevate the product’s quality.",
+    logoPath: "/images/bask_health_logo.jpg",
+    title: "Frontend Developer",
+    date: "July 2024 - August 2025",
+    responsibilities: [
+      "Developed and maintained responsive, high-performance user interfaces using React.js, TypeScript, and Tailwind CSS to improve overall user experience.",
+      "Collaborated with designers and backend developers to integrate APIs and implement modern UI/UX principles, reducing load times and enhancing interactivity.",
+      "Built reusable components and optimized frontend workflows, resulting in more efficient development and faster feature delivery.",
+    ],
+  },
+  {
+    review:
+      "Razmik’s contributions to Cretrix’s web platform have been highly valuable. He applies a strong problem-solving mindset and delivers efficient, user-centered solutions that enhance product performance and usability.",
+    logoPath: "/images/cretrix_logo.png",
+    title: "Frontend developer",
+    date: "September 2025 - present",
+    responsibilities: [
+      "Built a responsive, user-friendly interface for trading and account management using React.js.",
+      "Implemented GraphQL APIs for efficient data fetching, reducing over-fetching and improving performance.",
     ],
   },
 ];
@@ -144,7 +167,9 @@ const Experience = () => {
                 <div className="xl:w-2/6">
                   <GlowCard card={card} index={index}>
                     <div>
-                      <img src={card.imgPath} alt="exp-img" />
+                      {card?.imgPath && (
+                        <img src={card.imgPath} alt="exp-img" />
+                      )}
                     </div>
                   </GlowCard>
                 </div>
@@ -178,7 +203,7 @@ const Experience = () => {
                               <li key={index} className="text-lg text-slate-50">
                                 {responsibility}
                               </li>
-                            )
+                            ),
                           )}
                         </ul>
                       </div>
